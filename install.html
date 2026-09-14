@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#181818" />
+    <title>简行 EasyUp · 安装指引</title>
+    <style>
+      :root {
+        --bg: #181818;
+        --panel: #202020;
+        --line: #2c2c2c;
+        --text: #f5f1e8;
+        --muted: #9a9488;
+        --accent: #ffffff;
+        --ink: #171717;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+      html { -webkit-text-size-adjust: 100%; }
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Source Han Serif SC", "Source Han Serif CN", "Noto Serif SC", "Noto Serif CJK SC", serif;
+        letter-spacing: 0.025em;
+        line-height: 1.6;
+        padding: 32px 20px 48px;
+      }
+      .wrap { max-width: 560px; margin: 0 auto; }
+      .logo {
+        width: 72px; height: 72px;
+        border-radius: 18px;
+        background: #ffffff;
+        display: flex; align-items: center; justify-content: center;
+        margin: 0 auto 20px;
+        box-shadow: 0 6px 24px rgba(0,0,0,0.45);
+      }
+      .logo svg { width: 60px; height: 60px; }
+      h1 { font-size: 26px; font-weight: 700; text-align: center; letter-spacing: 0.08em; }
+      .sub { text-align: center; color: var(--muted); font-size: 14px; margin-top: 10px; }
+      .cta {
+        display: block; margin: 26px auto 0;
+        width: 100%; max-width: 480px; padding: 15px;
+        background: var(--accent); color: var(--ink);
+        border: none; border-radius: 12px;
+        font-family: inherit; font-weight: 700; font-size: 18px; letter-spacing: 0.2em;
+        text-align: center; text-decoration: none; cursor: pointer;
+        transition: transform 0.18s ease, opacity 0.18s ease;
+      }
+      .cta:active { transform: scale(0.97); opacity: 0.9; }
+      .qr-card {
+        margin-top: 26px;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 24px 20px 20px;
+        text-align: center;
+      }
+      .qr-card img { width: 220px; height: 220px; border-radius: 10px; display: block; margin: 0 auto; }
+      .qr-card .tip { color: var(--muted); font-size: 13px; margin-top: 14px; }
+      .url-row {
+        margin-top: 14px;
+        display: flex; gap: 10px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .url {
+        font-size: 14px; color: var(--text);
+        background: var(--bg);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 8px 12px;
+        word-break: break-all;
+        max-width: 100%;
+      }
+      .copy-btn {
+        font-family: inherit; font-size: 13px; font-weight: 700;
+        padding: 9px 16px;
+        background: transparent; color: var(--text);
+        border: 1px solid var(--line); border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.18s ease;
+      }
+      .copy-btn:active { background: var(--line); }
+      .section { margin-top: 30px; }
+      .section h2 {
+        font-size: 18px; font-weight: 700;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--line);
+      }
+      .step {
+        display: flex; gap: 14px;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 14px 16px;
+        margin-top: 12px;
+        align-items: flex-start;
+      }
+      .num {
+        flex: none;
+        width: 28px; height: 28px;
+        border-radius: 50%;
+        background: var(--accent); color: var(--ink);
+        font-weight: 700; font-size: 15px;
+        display: flex; align-items: center; justify-content: center;
+        margin-top: 2px;
+      }
+      .step .txt { font-size: 15px; padding-top: 2px; }
+      .step .txt b { font-weight: 700; }
+      .step .txt .muted { color: var(--muted); font-size: 13px; display: block; margin-top: 2px; }
+      .note {
+        margin-top: 30px;
+        font-size: 13px; color: var(--muted);
+        border-top: 1px solid var(--line);
+        padding-top: 16px;
+        text-align: center;
+      }
+      body.platform-ios .android-only { display: none; }
+      body.platform-android .ios-only { display: none; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+          <rect width="1024" height="1024" fill="#ffffff"/>
+          <g transform="translate(151 152) scale(.72)">
+            <g transform="translate(0 881) scale(1 -1)">
+              <path d="M345 811 154 861C130 716 79 562 27 465L38 457C124 516 200 598 262 705H283C295 675 303 636 299 599C380 521 496 644 357 705H506C515 705 523 707 527 713C510 650 488 592 466 547L476 540C545 579 607 635 659 709H674C689 677 697 633 690 592C708 575 727 566 745 565L714 530H415L424 502H724V51C724 40 721 33 706 33C687 33 618 38 618 38V25C660 18 674 3 686 -14C698 -31 701 -60 703 -99C844 -88 864 -43 864 40V480C885 484 897 493 904 501L799 582C835 612 837 674 742 709H948C962 709 973 714 976 725C931 765 855 824 855 824L788 737H677L703 782C726 782 739 790 744 803L557 860C551 815 541 768 530 724C489 762 426 815 426 815L366 733H278L305 788C328 789 341 798 345 811ZM221 597 213 592C236 564 262 524 277 484L123 498V-95H148C200 -95 257 -75 257 -67V454C269 456 278 459 283 463L286 451C298 443 310 439 321 438V31H343C403 31 440 57 440 65V109H548V60H570C614 60 671 92 671 103V362C685 365 694 371 698 376L593 455L540 401H440L343 438C417 451 438 586 221 597ZM548 137H440V245H548ZM548 373V273H440V373Z" fill="#171717"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <h1>简行 EasyUp</h1>
+      <p class="sub">习惯 · 健康 · 记账 · 成长，一站式记录</p>
+
+      <a class="cta" href="./">立即开始使用</a>
+
+      <div class="qr-card">
+        <img src="easyup-qr.png" alt="简行 EasyUp 网址二维码" />
+        <p class="tip">手机扫码，打开后按下方步骤添加到主屏幕</p>
+        <div class="url-row">
+          <span class="url">https://posama-cloud.github.io/Easyup/</span>
+          <button class="copy-btn" id="copyBtn">复制网址</button>
+        </div>
+      </div>
+
+      <div class="section ios-only" data-ui>
+        <h2>iPhone / iPad 安装步骤</h2>
+        <div class="step">
+          <span class="num">1</span>
+          <div class="txt">用 <b>Safari 浏览器</b> 打开上面的网址（或扫二维码）</div>
+        </div>
+        <div class="step">
+          <span class="num">2</span>
+          <div class="txt">点击底部中间的 <b>分享</b> 按钮
+            <span class="muted">一个方框里带向上箭头的图标</span>
+          </div>
+        </div>
+        <div class="step">
+          <span class="num">3</span>
+          <div class="txt">向下滑动，点击 <b>添加到主屏幕</b>
+            <span class="muted">若提示可修改名称，保持「简行」即可</span>
+          </div>
+        </div>
+        <div class="step">
+          <span class="num">4</span>
+          <div class="txt">点击右上角 <b>添加</b>，桌面出现「简行」图标，点开即可全屏使用</div>
+        </div>
+      </div>
+
+      <div class="section android-only" data-ui>
+        <h2>安卓手机安装步骤</h2>
+        <div class="step">
+          <span class="num">1</span>
+          <div class="txt">用 <b>Chrome 浏览器</b> 打开上面的网址（或扫二维码）</div>
+        </div>
+        <div class="step">
+          <span class="num">2</span>
+          <div class="txt">点击右上角 <b>菜单</b> 按钮
+            <span class="muted">竖排三个点的图标</span>
+          </div>
+        </div>
+        <div class="step">
+          <span class="num">3</span>
+          <div class="txt">点击 <b>添加到主屏幕</b>（部分手机显示为「安装应用」）
+            <span class="muted">确认后可在弹窗中修改名称，保持「简行」即可</span>
+          </div>
+        </div>
+        <div class="step">
+          <span class="num">4</span>
+          <div class="txt">点击 <b>添加</b>，桌面出现「简行」图标，点开即可全屏使用</div>
+        </div>
+      </div>
+
+      <p class="note">所有数据仅保存在手机本地，不上传任何服务器，卸载后数据不保留</p>
+    </div>
+
+    <script>
+      var ua = navigator.userAgent;
+      var isIOS = /iPhone|iPad|iPod/i.test(ua);
+      var isAndroid = /Android/i.test(ua);
+      if (isIOS) { document.body.classList.add("platform-ios"); }
+      else if (isAndroid) { document.body.classList.add("platform-android"); }
+
+      document.getElementById("copyBtn").addEventListener("click", function () {
+        var text = "https://posama-cloud.github.io/Easyup/";
+        function done() {
+          var btn = document.getElementById("copyBtn");
+          btn.textContent = "已复制";
+          setTimeout(function () { btn.textContent = "复制网址"; }, 1600);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done, function () { fallback(); });
+        } else { fallback(); }
+        function fallback() {
+          var ta = document.createElement("textarea");
+          ta.value = text;
+          ta.style.position = "fixed";
+          ta.style.opacity = "0";
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand("copy"); done(); } catch (e) {}
+          document.body.removeChild(ta);
+        }
+      });
+    </script>
+  </body>
+</html>
